@@ -12,7 +12,7 @@ template(v-if="!device && !server")
   button(v-on:click="connectDevice()") Connect To Device
 template(v-if="device && server")
   button(v-if="!deviceName" v-on:click="getDeviceName()") Get Device Name
-  button(v-on:click="getBatteryPercentage()") Get Batter Percentage
+  button(v-on:click="getBatteryPercentage()") Get Battery Percentage
   
   h3 Candle Effect Options
 
