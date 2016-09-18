@@ -5,7 +5,7 @@
 ## Dependencies
 
 - [PLAYBULB candle](https://www.mipow.com/products/playbulb-candle).
-- Chrome 45 >= with the Web Bluetooth API enabled, [here](https://developers.google.com/web/updates/2015/07/interact-with-ble-devices-on-the-web?hl=en) for details.
+- Chrome browser with the Web Bluetooth API enabled, [here](https://developers.google.com/web/updates/2015/07/interact-with-ble-devices-on-the-web?hl=en) for details.
 
 ## Setup
 
