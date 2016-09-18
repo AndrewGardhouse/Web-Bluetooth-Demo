@@ -1,0 +1,39 @@
+h1 Web Bluetooth Demo
+
+div(v-if="error")
+  h2 There was an error
+  pre {{ error }}
+  
+h4 Connection Status: {{ connectionStatus }}
+h4(v-if="deviceName") Device Name: {{ deviceName }}
+h4(v-if="batteryPercentage") Battery Percentage: {{ batteryPercentage }}%  
+
+template(v-if="!device && !server")
+  button(v-on:click="connectDevice()") Connect To Device
+template(v-if="device && server")
+  button(v-if="!deviceName" v-on:click="getDeviceName()") Get Device Name
+  button(v-on:click="getBatteryPercentage()") Get Batter Percentage
+  
+  h3 Candle Effect Options
+
+  form(v-on:submit.prevent="changeColor()")
+    button Set Colour And Effect
+    br
+    br
+    label(for="setting") Light Setting: 
+    select(v-model="selectedEffect" name="setting")
+      option(v-for="effect in bulbEffects") {{ effect }}
+    br
+    br
+    label(for="red") Red: 
+      input(v-model="red" name="red" type="number")
+    br
+    label(for="green") Green: 
+      input(v-model="green" name="green" type="number")
+    br
+    label(for="blue") Blue: 
+      input(v-model="blue" name="blue" type="number")
+      
+  
+
+script(src="app.js")
