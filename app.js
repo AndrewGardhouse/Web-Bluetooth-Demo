@@ -4,6 +4,7 @@ const candleDeviceNameUUID = 0xFFFF
 const candleColourUUID = 0xFFFC
 const candleEffectUUID = 0xFFFB
 
+// Comment
 window.Device = new Vue({
   el: 'body',
   data: {
